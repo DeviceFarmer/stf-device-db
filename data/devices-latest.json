@@ -15207,6 +15207,963 @@
       "ver": "9"
     }
   },
+  "iPhone_8": {
+    "carrier": {
+      "code": "s",
+      "name": "Softbank"
+    },
+    "cpu": {
+      "cores": 6,
+      "freq": 2.4,
+      "name": "Apple A11"
+    },
+    "date": "2017-09-22T15:00:00.000Z",
+    "display": {
+      "h": 1334,
+      "s": 4.7,
+      "w": 750
+    },
+    "maker": {
+      "code": "a",
+      "name": "Apple"
+    },
+    "memory": {
+      "ram": 2048,
+      "rom": 262144
+    },
+    "name": {
+      "id": "iPhone 8",
+      "long": ""
+    },
+    "os": {
+      "type": "ios",
+      "ver": "11"
+    }
+  },
+  "iPhone_XR": {
+    "carrier": {
+      "code": "s",
+      "name": "Softbank"
+    },
+    "cpu": {
+      "cores": 6,
+      "freq": 2.4,
+      "name": "Apple A12"
+    },
+    "date": "2018-10-26T15:00:00.000Z",
+    "display": {
+      "h": 1792,
+      "s": 6.1,
+      "w": 828
+    },
+    "maker": {
+      "code": "a",
+      "name": "Apple"
+    },
+    "memory": {
+      "ram": 3072,
+      "rom": 262144
+    },
+    "name": {
+      "id": "iPhone XR",
+      "long": ""
+    },
+    "os": {
+      "type": "ios",
+      "ver": "12"
+    }
+  },
+  "iPhone_XS": {
+    "carrier": {
+      "code": "s",
+      "name": "Softbank"
+    },
+    "cpu": {
+      "cores": 6,
+      "freq": 2.4,
+      "name": "Apple A12"
+    },
+    "date": "2018-09-21T15:00:00.000Z",
+    "display": {
+      "h": 2436,
+      "s": 5.8,
+      "w": 1125
+    },
+    "maker": {
+      "code": "a",
+      "name": "Apple"
+    },
+    "memory": {
+      "ram": 4096,
+      "rom": 524288
+    },
+    "name": {
+      "id": "iPhone XS",
+      "long": ""
+    },
+    "os": {
+      "type": "ios",
+      "ver": "12"
+    }
+  },
+  "iPhone_11": {
+    "carrier": {
+      "code": "f",
+      "name": "Foxconn"
+    },
+    "cpu": {
+      "cores": 6,
+      "freq": 2.65,
+      "name": "Apple A13"
+    },
+    "date": "2019-09-10T15:00:00.000Z",
+    "display": {
+      "h": 1792,
+      "s": 6.1,
+      "w": 828
+    },
+    "maker": {
+      "code": "a",
+      "name": "Apple"
+    },
+    "memory": {
+      "ram": 4096,
+      "rom": 65536
+    },
+    "name": {
+      "id": "iPhone 11",
+      "long": ""
+    },
+    "os": {
+      "type": "ios",
+      "ver": "13"
+    }
+  },
+  "iPad_Pro_9.7": {
+    "carrier": {
+      "code": "f",
+      "name": "Foxconn"
+    },
+    "cpu": {
+      "cores": 2,
+      "freq": 2.17,
+      "name": "Apple A10"
+    },
+    "date": "2016-03-31T15:00:00.000Z",
+    "display": {
+      "h": 2048,
+      "s": 9.7,
+      "w": 1536
+    },
+    "maker": {
+      "code": "a",
+      "name": "Apple"
+    },
+    "memory": {
+      "ram": 2048,
+      "rom": 131072
+    },
+    "name": {
+      "id": "iPad Pro 9.7",
+      "long": ""
+    },
+    "os": {
+      "type": "ios",
+      "ver": "9.3"
+    }
+  },
+  "JAT-L29": {
+    "carrier": {
+      "code": "h",
+      "name": "Huawei"
+    },
+    "cpu": {
+      "cores": 4,
+      "freq": 2.3,
+      "name": "MediaTek Helio P35 MT6765"
+    },
+    "date": "2019-12-12T15:00:00.000Z",
+    "display": {
+      "h": 1560,
+      "s": 6.09,
+      "w": 720
+    },
+    "maker": {
+      "code": "Huawei Jakarta",
+      "name": "Huawei"
+    },
+    "memory": {
+      "ram": 3072,
+      "rom": 65536
+    },
+    "name": {
+      "id": "Huawei JAT-L29",
+      "long": "Y6s 2019 Global Dual SIM TD-LTE 64GB JAT-L29"
+    },
+    "os": {
+      "type": "android",
+      "ver": "9.0"
+    }
+  },
+  "KFAUWI": {
+    "carrier": {
+      "code": "az",
+      "name": "Amazon"
+    },
+    "cpu": {
+      "cores": 4,
+      "freq": 1.3,
+      "name": "MediaTek MT8127"
+    },
+    "date": "2017-06-01T15:00:00.000Z",
+    "display": {
+      "h": 1024,
+      "s": 7,
+      "w": 600
+    },
+    "maker": {
+      "code": "Amazon",
+      "name": "Amazon"
+    },
+    "memory": {
+      "ram": 3072,
+      "rom": 65536
+    },
+    "name": {
+      "id": "KFAUWI",
+      "long": "Amazon Fire 7 7th gen WiFi 16GB"
+    },
+    "os": {
+      "type": "android",
+      "ver": "5.1"
+    }
+  },
+  "KFMAWI": {
+    "carrier": {
+      "code": "az",
+      "name": "Amazon"
+    },
+    "cpu": {
+      "cores": 8,
+      "freq": 1.99,
+      "name": "ARM MT8183"
+    },
+    "date": "2019-10-30T15:00:00.000Z",
+    "display": {
+      "h": 1920,
+      "s": 9.4,
+      "w": 1200
+    },
+    "maker": {
+      "code": "Amazon",
+      "name": "Amazon"
+    },
+    "memory": {
+      "ram": 2048,
+      "rom": 32768
+    },
+    "name": {
+      "id": "KFMAWI",
+      "long": "Amazon Fire HD 10"
+    },
+    "os": {
+      "type": "android",
+      "ver": "9"
+    }
+  },
+  "KFMUWI": {
+    "carrier": {
+      "code": "az",
+      "name": "Amazon"
+    },
+    "cpu": {
+      "cores": 4,
+      "freq": 1.3,
+      "name": "ARMv7 Processor rev 3"
+    },
+    "date": "2019-06-06T15:00:00.000Z",
+    "display": {
+      "h": 1024,
+      "s": 7.4,
+      "w": 600
+    },
+    "maker": {
+      "code": "Amazon",
+      "name": "Amazon"
+    },
+    "memory": {
+      "ram": 2048,
+      "rom": 32768
+    },
+    "name": {
+      "id": "KFMUWI",
+      "long": "Amazon Fire 7"
+    },
+    "os": {
+      "type": "android",
+      "ver": "7.1.2"
+    }
+  },
+  "KFTRWI": {
+    "carrier": {
+      "code": "az",
+      "name": "Amazon"
+    },
+    "cpu": {
+      "cores": 8,
+      "freq": 2,
+      "name": "AArch64 Processor rev 4"
+    },
+    "date": "2021-05-26T15:00:00.000Z",
+    "display": {
+      "h": 1920,
+      "s": 9.4,
+      "w": 1200
+    },
+    "maker": {
+      "code": "Amazon",
+      "name": "Amazon"
+    },
+    "memory": {
+      "ram": 3072,
+      "rom": 131072
+    },
+    "name": {
+      "id": "KFMUWI",
+      "long": "Amazon Fire HD 10"
+    },
+    "os": {
+      "type": "android",
+      "ver": "9"
+    }
+  },
+  "LG-X155": {
+    "carrier": {
+      "code": "lg",
+      "name": "LG"
+    },
+    "cpu": {
+      "cores": 4,
+      "freq": 1.3,
+      "name": "ARM Cortex-A7"
+    },
+    "date": "2015-01-08T15:00:00.000Z",
+    "display": {
+      "h": 854,
+      "s": 5,
+      "w": 480
+    },
+    "maker": {
+      "code": "lg",
+      "name": "LG"
+    },
+    "memory": {
+      "ram": 1024,
+      "rom": 8192
+    },
+    "name": {
+      "id": "LG-X155",
+      "long": "LG Max X155"
+    },
+    "os": {
+      "type": "android",
+      "ver": "5.0.1"
+    }
+  },
+  "moto_g9_play": {
+    "carrier": {
+      "code": "Motorola",
+      "name": "Motorola Smartphones"
+    },
+    "cpu": {
+      "cores": 8,
+      "freq": 2,
+      "name": "Qualcomm Snapdragon 662"
+    },
+    "date": "2020-08-28T15:00:00.000Z",
+    "display": {
+      "h": 1600,
+      "s": 6.5,
+      "w": 720
+    },
+    "maker": {
+      "code": "motorola",
+      "name": "Motorola"
+    },
+    "memory": {
+      "ram": 4096,
+      "rom": 131072
+    },
+    "name": {
+      "id": "MOTO G9 PLAY",
+      "long": "MOTOROLA MOTO G9 PLAY"
+    },
+    "os": {
+      "type": "android",
+      "ver": "10"
+    }
+  },
+  "SM-A326B": {
+    "carrier": {
+      "code": "Samsung",
+      "name": "Samsung Electronics"
+    },
+    "cpu": {
+      "cores": 8,
+      "freq": 2,
+      "name": "MediaTek Dimensity 720"
+    },
+    "date": "2021-02-19T15:00:00.000Z",
+    "display": {
+      "h": 1600,
+      "s": 6.5,
+      "w": 720
+    },
+    "maker": {
+      "code": "samsung",
+      "name": "Samsung"
+    },
+    "memory": {
+      "ram": 6144,
+      "rom": 131072
+    },
+    "name": {
+      "id": "SM-A326B",
+      "long": "Samsung Galaxy A32 5G 2021 Premium Edition Global Dual SIM TD-LTE 128GB"
+    },
+    "os": {
+      "type": "android",
+      "ver": "11"
+    }
+  },
+  "SM-A515F": {
+    "carrier": {
+      "code": "Samsung",
+      "name": "Samsung Electronics"
+    },
+    "cpu": {
+      "cores": 8,
+      "freq": 2.3,
+      "name": "Samsung Exynos 9 Octa 9611"
+    },
+    "date": "2020-01-10T15:00:00.000Z",
+    "display": {
+      "h": 2400,
+      "s": 6.5,
+      "w": 1080
+    },
+    "maker": {
+      "code": "samsung",
+      "name": "Samsung"
+    },
+    "memory": {
+      "ram": 4096,
+      "rom": 131072
+    },
+    "name": {
+      "id": "SM-A515F",
+      "long": "SM-A515F Galaxy A51 2019 Global TD-LTE 128GB"
+    },
+    "os": {
+      "type": "android",
+      "ver": "10"
+    }
+  },
+  "SM-G781B": {
+    "carrier": {
+      "code": "Samsung",
+      "name": "Samsung Electronics"
+    },
+    "cpu": {
+      "cores": 8,
+      "freq": 2.8,
+      "name": "Qualcomm Snapdragon 865"
+    },
+    "date": "2020-10-02T15:00:00.000Z",
+    "display": {
+      "h": 2400,
+      "s": 6.5,
+      "w": 1080
+    },
+    "maker": {
+      "code": "samsung",
+      "name": "Samsung"
+    },
+    "memory": {
+      "ram": 4096,
+      "rom": 131072
+    },
+    "name": {
+      "id": "SM-G781B",
+      "long": "SM-G781B Galaxy S20 FE 5G Standard Global TD-LTE 128GB"
+    },
+    "os": {
+      "type": "android",
+      "ver": "10"
+    }
+  },
+  "SM-G955F": {
+    "carrier": {
+      "code": "Samsung",
+      "name": "Samsung Electronics"
+    },
+    "cpu": {
+      "cores": 8,
+      "freq": 2.3,
+      "name": "Samsung Exynos 9 Octa 8895M"
+    },
+    "date": "2017-06-09T15:00:00.000Z",
+    "display": {
+      "h": 2880,
+      "s": 6.2,
+      "w": 1440
+    },
+    "maker": {
+      "code": "samsung",
+      "name": "Samsung"
+    },
+    "memory": {
+      "ram": 6144,
+      "rom": 131072
+    },
+    "name": {
+      "id": "SM-G955F",
+      "long": "SM-G955FD Galaxy S8+ Duos TD-LTE 128GB"
+    },
+    "os": {
+      "type": "android",
+      "ver": "7.1.1"
+    }
+  },
+  "SM-G960F": {
+    "carrier": {
+      "code": "Samsung",
+      "name": "Samsung Electronics"
+    },
+    "cpu": {
+      "cores": 8,
+      "freq": 2.7,
+      "name": "Samsung Exynos 9 Octa 9810"
+    },
+    "date": "2018-05-02T15:00:00.000Z",
+    "display": {
+      "h": 2960,
+      "s": 6.8,
+      "w": 1440
+    },
+    "maker": {
+      "code": "samsung",
+      "name": "Samsung"
+    },
+    "memory": {
+      "ram": 4096,
+      "rom": 131072
+    },
+    "name": {
+      "id": "SM-G960F",
+      "long": "SM-G960F/DS Galaxy S9 Duos TD-LTE"
+    },
+    "os": {
+      "type": "android",
+      "ver": "8.0"
+    }
+  },
+  "SM-G970F": {
+    "carrier": {
+      "code": "Samsung",
+      "name": "Samsung Electronics"
+    },
+    "cpu": {
+      "cores": 8,
+      "freq": 2.7,
+      "name": "Samsung Exynos 9 Octa 9820"
+    },
+    "date": "2019-03-08T15:00:00.000Z",
+    "display": {
+      "h": 2280,
+      "s": 5.8,
+      "w": 1080
+    },
+    "maker": {
+      "code": "samsung",
+      "name": "Samsung"
+    },
+    "memory": {
+      "ram": 6144,
+      "rom": 131072
+    },
+    "name": {
+      "id": "SM-G970F",
+      "long": "SM-G970F/DS Galaxy S10E Global Dual SIM TD-LTE"
+    },
+    "os": {
+      "type": "android",
+      "ver": "9.0"
+    }
+  },
+  "SM-G975F": {
+    "carrier": {
+      "code": "Samsung",
+      "name": "Samsung Electronics"
+    },
+    "cpu": {
+      "cores": 8,
+      "freq": 2.7,
+      "name": "Samsung Exynos 9 Octa 9820"
+    },
+    "date": "2019-03-08T15:00:00.000Z",
+    "display": {
+      "h": 3040,
+      "s": 6.4,
+      "w": 1440
+    },
+    "maker": {
+      "code": "samsung",
+      "name": "Samsung"
+    },
+    "memory": {
+      "ram": 8192,
+      "rom": 131072
+    },
+    "name": {
+      "id": "SM-G975F",
+      "long": "SM-G975F/DS Galaxy S10+ Global Dual SIM TD-LTE"
+    },
+    "os": {
+      "type": "android",
+      "ver": "9.0"
+    }
+  },
+  "SM-G980F": {
+    "carrier": {
+      "code": "Samsung",
+      "name": "Samsung Electronics"
+    },
+    "cpu": {
+      "cores": 8,
+      "freq": 2.7,
+      "name": "Samsung Exynos 9 Octa 990"
+    },
+    "date": "2020-03-06T15:00:00.000Z",
+    "display": {
+      "h": 3200,
+      "s": 6.2,
+      "w": 1440
+    },
+    "maker": {
+      "code": "samsung",
+      "name": "Samsung"
+    },
+    "memory": {
+      "ram": 8192,
+      "rom": 131072
+    },
+    "name": {
+      "id": "SM-G980F",
+      "long": "SM-G980F Galaxy S20 Global TD-LTE"
+    },
+    "os": {
+      "type": "android",
+      "ver": "10"
+    }
+  },
+  "SM-G991B": {
+    "carrier": {
+      "code": "Samsung",
+      "name": "Samsung Electronics"
+    },
+    "cpu": {
+      "cores": 8,
+      "freq": 2.9,
+      "name": "Samsung Exynos 2100"
+    },
+    "date": "2021-01-29T15:00:00.000Z",
+    "display": {
+      "h": 2400,
+      "s": 6.2,
+      "w": 1080
+    },
+    "maker": {
+      "code": "samsung",
+      "name": "Samsung"
+    },
+    "memory": {
+      "ram": 8192,
+      "rom": 262144
+    },
+    "name": {
+      "id": "SM-G991B",
+      "long": "SM-G991B/DS Galaxy S21 5G Global Dual SIM TD-LTE"
+    },
+    "os": {
+      "type": "android",
+      "ver": "11"
+    }
+  },
+  "SM-G9500": {
+    "carrier": {
+      "code": "Samsung",
+      "name": "Samsung Electronics"
+    },
+    "cpu": {
+      "cores": 8,
+      "freq": 2.35,
+      "name": "Qualcomm Snapdragon 835"
+    },
+    "date": "2017-07-17T15:00:00.000Z",
+    "display": {
+      "h": 2960,
+      "s": 5.8,
+      "w": 1440
+    },
+    "maker": {
+      "code": "samsung",
+      "name": "Samsung"
+    },
+    "memory": {
+      "ram": 4096,
+      "rom": 65536
+    },
+    "name": {
+      "id": "SM-G9500",
+      "long": "SM-G9500 Galaxy S8 Duos"
+    },
+    "os": {
+      "type": "android",
+      "ver": "7"
+    }
+  },
+  "SM-M215F": {
+    "carrier": {
+      "code": "Samsung",
+      "name": "Samsung Electronics"
+    },
+    "cpu": {
+      "cores": 8,
+      "freq": 2.3,
+      "name": "Samsung Exynos 9 Octa 9611"
+    },
+    "date": "2020-05-13T15:00:00.000Z",
+    "display": {
+      "h": 2340,
+      "s": 6.4,
+      "w": 1080
+    },
+    "maker": {
+      "code": "samsung",
+      "name": "Samsung"
+    },
+    "memory": {
+      "ram": 4096,
+      "rom": 65536
+    },
+    "name": {
+      "id": "SM-M215F",
+      "long": "Galaxy M21 global dual SIM"
+    },
+    "os": {
+      "type": "android",
+      "ver": "10"
+    }
+  },
+  "SM-N960U1": {
+    "carrier": {
+      "code": "Samsung",
+      "name": "Samsung Electronics"
+    },
+    "cpu": {
+      "cores": 8,
+      "freq": 2.8,
+      "name": "Qualcomm Snapdragon 845"
+    },
+    "date": "2018-08-24T15:00:00.000Z",
+    "display": {
+      "h": 2960,
+      "s": 6.4,
+      "w": 1440
+    },
+    "maker": {
+      "code": "samsung",
+      "name": "Samsung"
+    },
+    "memory": {
+      "ram": 8192,
+      "rom": 524288
+    },
+    "name": {
+      "id": "SM-N960U1",
+      "long": "SM-N960U1 Galaxy Note 9 TD-LTE"
+    },
+    "os": {
+      "type": "android",
+      "ver": "8.1"
+    }
+  },
+  "SM-N975F": {
+    "carrier": {
+      "code": "Samsung",
+      "name": "Samsung Electronics"
+    },
+    "cpu": {
+      "cores": 8,
+      "freq": 2.73,
+      "name": "Samsung Exynos 9 Octa 9825"
+    },
+    "date": "2019-08-23T15:00:00.000Z",
+    "display": {
+      "h": 3040,
+      "s": 6.8,
+      "w": 1440
+    },
+    "maker": {
+      "code": "samsung",
+      "name": "Samsung"
+    },
+    "memory": {
+      "ram": 12288,
+      "rom": 262144
+    },
+    "name": {
+      "id": "SM-N975F",
+      "long": "SM-N975F/DS Galaxy Note 10+ Global Dual SIM TD-LTE"
+    },
+    "os": {
+      "type": "android",
+      "ver": "9.0"
+    }
+  },
+  "SM-N981B": {
+    "carrier": {
+      "code": "Samsung",
+      "name": "Samsung Electronics"
+    },
+    "cpu": {
+      "cores": 8,
+      "freq": 2.73,
+      "name": "Samsung Exynos 9 Octa 990"
+    },
+    "date": "2020-08-21T15:00:00.000Z",
+    "display": {
+      "h": 2400,
+      "s": 6.7,
+      "w": 1080
+    },
+    "maker": {
+      "code": "samsung",
+      "name": "Samsung"
+    },
+    "memory": {
+      "ram": 8192,
+      "rom": 131072
+    },
+    "name": {
+      "id": "SM-N981B",
+      "long": "SM-N981B/DS Galaxy Note 20 5G Global Dual SIM TD-LTE"
+    },
+    "os": {
+      "type": "android",
+      "ver": "10.0"
+    }
+  },
+  "SM-P610": {
+    "carrier": {
+      "code": "Samsung",
+      "name": "Samsung Electronics"
+    },
+    "cpu": {
+      "cores": 8,
+      "freq": 2.31,
+      "name": "Samsung Exynos 9 Octa 9611"
+    },
+    "date": "2020-05-01T15:00:00.000Z",
+    "display": {
+      "h": 1200,
+      "s": 10.4,
+      "w": 2000
+    },
+    "maker": {
+      "code": "samsung",
+      "name": "Samsung"
+    },
+    "memory": {
+      "ram": 4096,
+      "rom": 65536
+    },
+    "name": {
+      "id": "SM-P610",
+      "long": "SM-P610 Galaxy Tab S6 Lite 10.4 WiFi"
+    },
+    "os": {
+      "type": "android",
+      "ver": "10.0"
+    }
+  },
+  "SM-T380": {
+    "carrier": {
+      "code": "Samsung",
+      "name": "Samsung Electronics"
+    },
+    "cpu": {
+      "cores": 8,
+      "freq": 1.4,
+      "name": "Qualcomm Snapdragon 425 MSM8917"
+    },
+    "date": "2017-11-02T15:00:00.000Z",
+    "display": {
+      "h": 800,
+      "s": 8,
+      "w": 1280
+    },
+    "maker": {
+      "code": "samsung",
+      "name": "Samsung"
+    },
+    "memory": {
+      "ram": 2048,
+      "rom": 16384
+    },
+    "name": {
+      "id": "SM-T380",
+      "long": "SM-T380 Galaxy Tab A 8.0 2017 WiFi"
+    },
+    "os": {
+      "type": "android",
+      "ver": "7.0"
+    }
+  },
+  "SM-T500": {
+    "carrier": {
+      "code": "Samsung",
+      "name": "Samsung Electronics"
+    },
+    "cpu": {
+      "cores": 8,
+      "freq": 2,
+      "name": "Qualcomm Snapdragon 662 SM6115"
+    },
+    "date": "2020-09-02T15:00:00.000Z",
+    "display": {
+      "h": 1200,
+      "s": 10.4,
+      "w": 2000
+    },
+    "maker": {
+      "code": "samsung",
+      "name": "Samsung"
+    },
+    "memory": {
+      "ram": 3072,
+      "rom": 65536
+    },
+    "name": {
+      "id": "SM-T500",
+      "long": "SM-T500 Galaxy Tab A7 10.4 2020 WiFi"
+    },
+    "os": {
+      "type": "android",
+      "ver": "10.0"
+    }
+  },
   "pigu": {
     "carrier": {
       "code": "_",
