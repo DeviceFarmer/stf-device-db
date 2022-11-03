@@ -1,12 +1,12 @@
 {
   "name": "@devicefarmer/stf-device-db",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "A smartphone/device database with images for STF.",
   "keywords": [
     "stf"
   ],
   "bugs": {
-    "url": "https://github.com/openstf/stf-device-db/issues"
+    "url": "https://github.com/DeviceFarmer/stf-device-db/issues"
   },
   "license": "CC-BY-SA-4.0",
   "author": {
