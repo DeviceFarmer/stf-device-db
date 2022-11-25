@@ -6,6 +6,7 @@ blocks:
           jobs:
               - name: NPM publish
                 commands:
+                    - install-package jq jpegoptim graphicsmagick
                     - checkout
                     - sem-version node 12
                     - cache restore
