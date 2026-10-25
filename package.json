@@ -1,25 +1,38 @@
 {
   "name": "@devicefarmer/stf-device-db",
-  "version": "1.4.0",
-  "description": "A smartphone/device database with images for STF.",
+  "version": "2.0.0",
+  "description": "A smartphone/device database for STF.",
   "keywords": [
     "stf"
   ],
   "bugs": {
     "url": "https://github.com/DeviceFarmer/stf-device-db/issues"
   },
-  "license": "CC-BY-SA-4.0",
+  "license": "(CC-BY-SA-4.0 AND Apache-2.0)",
   "author": {
     "name": "DeviceFarmer",
     "email": "contact@devicefarmer.com",
     "url": "https://devicefarmer.com"
   },
-  "main": "./index",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "dist/devices.json"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/devicefarmer/stf-device-db.git"
   },
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
-    "prepublish": "make"
+    "build": "node scripts/build-db.mjs",
+    "test": "node --test test/*.test.mjs"
+  },
+  "devDependencies": {
+    "yaml": "^2.8.3"
   }
 }
