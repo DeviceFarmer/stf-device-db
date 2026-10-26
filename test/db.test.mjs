@@ -439,3 +439,53 @@ test('pipeline parsers normalize dates, CPU, memory tiers, and cross-vendor guar
   assert.equal(models.pkr110.b, 'OnePlus')
   assert.equal(models.pkr110.y.rom, 256)
 })
+
+test('LineageOS specs reach a device that Play lists under its maker and LineageOS under its seller', () => {
+  const models = {
+    'nexus 5': { b: 'LGE', m: 'Nexus 5', d: null, c: null, y: null }
+  }
+  const codenames = {
+    hammerhead: { b: 'LGE', m: 'Nexus 5', d: null, c: null, y: null }
+  }
+  const codenameToModels = new Map([['hammerhead', new Set(['nexus 5'])]])
+  applyLineageDoc(
+    {
+      vendor: 'Google',
+      name: 'Nexus 5',
+      codename: 'hammerhead',
+      release: '2013-10-31',
+      soc: 'Qualcomm MSM8974 Snapdragon 800',
+      cpu_cores: '4',
+      cpu_freq: '2.26 GHz',
+      ram: '2 GB',
+      storage: '16/32 GB'
+    },
+    models,
+    codenames,
+    codenameToModels
+  )
+  assert.equal(models['nexus 5'].b, 'LGE')
+  assert.equal(models['nexus 5'].d, '2013-10-31')
+  assert.equal(models['nexus 5'].c.cores, 4)
+  assert.equal(codenames.hammerhead.b, 'LGE')
+  assert.equal(codenames.hammerhead.y.ram, 2048)
+
+  const nexus5 = find({ model: 'Nexus 5', name: 'hammerhead' })
+  assert.equal(nexus5.brand, 'LGE')
+  assert.equal(nexus5.date, '2013-10-31')
+  assert.equal(nexus5.cpu.name, 'Qualcomm MSM8974 Snapdragon 800')
+})
+
+test('an identical model name alone does not tie devices of different brands', () => {
+  const models = {
+    thor: { b: 'QUBO', m: 'THOR', d: null, c: null, y: null }
+  }
+  applyLineageDoc(
+    { vendor: 'AYN', name: 'Thor', codename: 'odin2thor', models: ['Thor'], soc: 'Qualcomm QCS8550' },
+    models,
+    {},
+    new Map()
+  )
+  assert.equal(models.thor.b, 'QUBO')
+  assert.equal(models.thor.c, null)
+})

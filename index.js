@@ -1,4 +1,5 @@
 const data = require('./dist/devices.json')
+const { canonicalBrand, brandsMatch } = require('./brands')
 
 const FALLBACK_IMAGE = 'generic-phone-v1.svg'
 
@@ -10,92 +11,10 @@ const XML_ENTITIES = {
   "'": '&apos;'
 }
 
-const BRAND_FAMILY = {
-  lg: 'lg',
-  lge: 'lg',
-  'lg electronics': 'lg',
-  xiaomi: 'xiaomi',
-  redmi: 'xiaomi',
-  poco: 'xiaomi',
-  blackshark: 'xiaomi',
-  'black shark': 'xiaomi',
-  huawei: 'huawei',
-  honor: 'huawei',
-  zte: 'zte',
-  nubia: 'zte',
-  redmagic: 'zte',
-  'red magic': 'zte',
-  lenovo: 'lenovo',
-  motorola: 'lenovo',
-  zuk: 'lenovo',
-  alcatel: 'tcl',
-  tct: 'tcl',
-  'tct alcatel': 'tcl',
-  tcl: 'tcl',
-  nokia: 'nokia',
-  hmd: 'nokia',
-  'hmd global': 'nokia',
-  vivo: 'vivo',
-  iqoo: 'vivo',
-  oppo: 'oppo',
-  oneplus: 'oppo',
-  realme: 'oppo',
-  nothing: 'nothing',
-  cmf: 'nothing',
-  'cmf by nothing': 'nothing',
-  asus: 'asus',
-  asustek: 'asus',
-  sony: 'sony',
-  somc: 'sony',
-  fxtec: 'fxtec',
-  'f x tec': 'fxtec',
-  bn: 'bn',
-  'barnes noble': 'bn',
-  'barnes and noble': 'bn',
-  ark: 'ark',
-  'ark benefit': 'ark'
-}
-
 const modelKeysCache = Object.keys(data.models)
 
 function hasOwn(obj, key) {
   return Boolean(obj && typeof obj === 'object' && Object.hasOwn(obj, key))
-}
-
-function canonicalBrand(brand) {
-  const norm = String(brand || '')
-    .trim()
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, ' ')
-    .trim()
-  if (!norm) return ''
-  if (hasOwn(BRAND_FAMILY, norm)) return BRAND_FAMILY[norm]
-  const firstWord = norm.split(' ')[0]
-  if (
-    firstWord &&
-    hasOwn(BRAND_FAMILY, firstWord) &&
-    (firstWord === 'motorola' ||
-      firstWord === 'tct' ||
-      firstWord === 'tcl' ||
-      firstWord === 'alcatel' ||
-      firstWord === 'hmd' ||
-      firstWord === 'nokia' ||
-      firstWord === 'asus' ||
-      firstWord === 'asustek' ||
-      firstWord === 'sony' ||
-      firstWord === 'realme' ||
-      firstWord === 'cmf')
-  ) {
-    return BRAND_FAMILY[firstWord]
-  }
-  return norm
-}
-
-function brandsMatch(a, b) {
-  const ca = canonicalBrand(a)
-  const cb = canonicalBrand(b)
-  if (!ca || !cb) return true
-  return ca === cb || ca.startsWith(cb + ' ') || cb.startsWith(ca + ' ')
 }
 
 function entryMatchesBrand(rawBrand, entry) {

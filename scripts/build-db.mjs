@@ -1,8 +1,13 @@
 import fs from 'node:fs/promises'
+import { readFileSync } from 'node:fs'
 import path from 'node:path'
 import zlib from 'node:zlib'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import YAML from 'yaml'
+import brands from '../brands.js'
+
+const { canonicalBrand, brandsMatch } = brands
+const pkg = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8'))
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const DIST_DIR = path.resolve(__dirname, '../dist')
@@ -11,53 +16,7 @@ const OUTPUT_FILE = path.join(DIST_DIR, 'devices.json')
 const PLAY_CSV_URL = 'https://storage.googleapis.com/play_public/supported_devices.csv'
 const LINEAGE_TAR_URL = 'https://codeload.github.com/LineageOS/lineage_wiki/tar.gz/refs/heads/main'
 const WIKIDATA_SPARQL_URL = 'https://query.wikidata.org/sparql?format=json'
-const USER_AGENT = 'DeviceFarmer-stf-device-db/2.0.0 (https://github.com/DeviceFarmer/stf-device-db; contact@devicefarmer.com)'
-
-const BRAND_FAMILY_MAP = new Map([
-  ['lg', 'lg'],
-  ['lge', 'lg'],
-  ['lg electronics', 'lg'],
-  ['xiaomi', 'xiaomi'],
-  ['redmi', 'xiaomi'],
-  ['poco', 'xiaomi'],
-  ['blackshark', 'xiaomi'],
-  ['black shark', 'xiaomi'],
-  ['huawei', 'huawei'],
-  ['honor', 'huawei'],
-  ['zte', 'zte'],
-  ['nubia', 'zte'],
-  ['redmagic', 'zte'],
-  ['red magic', 'zte'],
-  ['lenovo', 'lenovo'],
-  ['motorola', 'lenovo'],
-  ['zuk', 'lenovo'],
-  ['tct', 'tcl'],
-  ['tct alcatel', 'tcl'],
-  ['alcatel', 'tcl'],
-  ['tcl', 'tcl'],
-  ['nokia', 'nokia'],
-  ['hmd', 'nokia'],
-  ['hmd global', 'nokia'],
-  ['vivo', 'vivo'],
-  ['iqoo', 'vivo'],
-  ['oppo', 'oppo'],
-  ['oneplus', 'oppo'],
-  ['realme', 'oppo'],
-  ['nothing', 'nothing'],
-  ['cmf', 'nothing'],
-  ['cmf by nothing', 'nothing'],
-  ['asus', 'asus'],
-  ['asustek', 'asus'],
-  ['sony', 'sony'],
-  ['somc', 'sony'],
-  ['f x tec', 'fxtec'],
-  ['fxtec', 'fxtec'],
-  ['barnes noble', 'bn'],
-  ['barnes and noble', 'bn'],
-  ['bn', 'bn'],
-  ['ark', 'ark'],
-  ['ark benefit', 'ark']
-])
+const USER_AGENT = `DeviceFarmer-stf-device-db/${pkg.version} (https://github.com/DeviceFarmer/stf-device-db; contact@devicefarmer.com)`
 
 // Stock Google Nexus 7 product names (ro.product.name) mapped to hardware codenames (ro.product.device)
 const PRODUCT_CODENAME_ALIASES = [
@@ -67,45 +26,8 @@ const PRODUCT_CODENAME_ALIASES = [
   ['razorg', 'deb']
 ]
 
-export function canonicalizeBrand(brand) {
-  const norm = String(brand || '')
-    .trim()
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, ' ')
-    .trim()
-  if (!norm) return ''
-  if (BRAND_FAMILY_MAP.has(norm)) return BRAND_FAMILY_MAP.get(norm)
-  const firstWord = norm.split(' ')[0]
-  if (
-    firstWord &&
-    BRAND_FAMILY_MAP.has(firstWord) &&
-    (firstWord === 'motorola' ||
-      firstWord === 'tct' ||
-      firstWord === 'tcl' ||
-      firstWord === 'alcatel' ||
-      firstWord === 'hmd' ||
-      firstWord === 'nokia' ||
-      firstWord === 'asus' ||
-      firstWord === 'asustek' ||
-      firstWord === 'sony' ||
-      firstWord === 'realme' ||
-      firstWord === 'cmf')
-  ) {
-    return BRAND_FAMILY_MAP.get(firstWord)
-  }
-  return norm
-}
-
-export function brandsAreCompatible(brandA, brandB) {
-  const a = canonicalizeBrand(brandA)
-  const b = canonicalizeBrand(brandB)
-  if (!a || !b) return true
-  if (a === b) return true
-  if (a.length >= 3 && b.length >= 3 && (a.startsWith(b + ' ') || b.startsWith(a + ' '))) {
-    return true
-  }
-  return false
-}
+export const canonicalizeBrand = canonicalBrand
+export const brandsAreCompatible = brandsMatch
 
 function unwrapYamlScalar(raw) {
   if (raw === null || raw === undefined) return null
@@ -583,6 +505,12 @@ export function applyLineageDoc(doc, models, codenames, codenameToModels = new M
     ? doc.models.map(m => String(m).trim()).filter(Boolean)
     : []
 
+  // Play lists some devices under the maker and LineageOS under the seller (LGE vs Google for the
+  // Nexus 5), so for entries already tied by codename an identical marketing name is enough. A bare
+  // model name is not: LineageOS's AYN "Thor" would otherwise match Play's unrelated QUBO "THOR".
+  const sameDevice = (entry) => brandsAreCompatible(entry.b, vendor) ||
+    Boolean(name && entry.m && normalizeBrandMarketKey('', entry.m) === normalizeBrandMarketKey('', name))
+
   const mergeInto = (target, fallbackMarket) => {
     if (!target.b && vendor) target.b = vendor
     if (!target.m && (name || fallbackMarket)) target.m = name || fallbackMarket
@@ -607,7 +535,7 @@ export function applyLineageDoc(doc, models, codenames, codenameToModels = new M
     if (!existingCode) {
       codenames[cKey] = { b: vendor, m: name || codename, d: null, c: null, y: null }
       mergeInto(codenames[cKey], codename)
-    } else if (brandsAreCompatible(existingCode.b, vendor)) {
+    } else if (sameDevice(existingCode)) {
       mergeInto(existingCode, codename)
     } else {
       // Existing Play codename belonged to a different vendor; look for a matching-vendor Play entry or replace with LineageOS
@@ -624,7 +552,7 @@ export function applyLineageDoc(doc, models, codenames, codenameToModels = new M
       for (const mKey of mappedModels) {
         const targetModel = models[mKey]
         if (!targetModel) continue
-        if (!brandsAreCompatible(targetModel.b, vendor)) continue
+        if (!sameDevice(targetModel)) continue
         // Do not pollute ambiguous multi-generation model keys (e.g. "Nexus 7") with one generation's specs
         if (targetModel.a) continue
         mergeInto(targetModel, mKey)
