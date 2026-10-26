@@ -7,11 +7,10 @@
 *.seed
 *.tgz
 *.DS_Store
-/dist/
 /build/
+/node_modules/
 lib-cov
 logs
 npm-debug.log
 pids
 results
-package-lock.json
