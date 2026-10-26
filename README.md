@@ -117,7 +117,11 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-* **Data (`dist/devices.json`)**: Licensed under [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/) (derived from Google Play CC-BY-4.0, LineageOS CC-BY-SA-3.0, and Wikidata CC0).
-* **Code (`index.js`, `index.d.ts`, `scripts/*`, `test/*`)**: Licensed under [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
+* **Data (`dist/devices.json`)**: Licensed under [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/), adapted from the LineageOS Wiki (CC-BY-SA-3.0) and Wikidata (CC0).
+* **Code (`index.js`, `index.d.ts`, `brands.js`, `scripts/*`, `test/*`)**: Licensed under [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+### Google Play device identifiers
+
+The brand, marketing name, codename and model of every device come from the [Google Play Supported Devices](https://support.google.com/googleplay/answer/1727131) list, which Google publishes without a stated license. They are used deliberately: no openly licensed source maps Android model numbers to marketing names at this scale, and LineageOS alone would cover about 2% of the models. Only these factual identifiers are taken. The CC-BY-SA-4.0 grant covers DeviceFarmer's selection and arrangement of them, not the identifiers themselves, and does not license the Google Play list as a whole.
 
 See [LICENSE](LICENSE) for full details.
