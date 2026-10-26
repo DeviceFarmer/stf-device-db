@@ -55,12 +55,18 @@ function getBrandPalette(brand) {
   }
 }
 
+// Trims underscores without /_+$/, which backtracks quadratically over a long run of them
+function trimUnderscores(value) {
+  let start = 0
+  let end = value.length
+  while (start < end && value[start] === '_') start++
+  while (end > start && value[end - 1] === '_') end--
+  return value.slice(start, end)
+}
+
 function makeImageToken(id) {
   if (!id) return FALLBACK_IMAGE
-  const slug = String(id)
-    .trim()
-    .replace(/[^a-zA-Z0-9._-]+/g, '_')
-    .replace(/^_+|_+$/g, '')
+  const slug = trimUnderscores(String(id).trim().replace(/[^a-zA-Z0-9._-]+/g, '_'))
   if (!slug || /^\.+$/.test(slug)) return FALLBACK_IMAGE
   return slug.toLowerCase().endsWith('.svg') ? slug : `${slug}.svg`
 }
