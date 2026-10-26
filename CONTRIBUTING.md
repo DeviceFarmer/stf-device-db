@@ -7,7 +7,7 @@ We are happy to accept contributions that follow the guidelines below.
 1. Fork the repository.
 2. Create a feature branch out of `master` for your change.
 3. Implement your changes and add/update tests in `test/db.test.mjs`.
-4. Run `npm test` (requires Node.js >= 20) to verify all checks pass.
+4. Run `npm test` (requires Node.js >= 22.12) to verify all checks pass.
 5. Submit a pull request against `master`.
 
 ## Guidelines

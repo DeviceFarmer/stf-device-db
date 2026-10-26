@@ -1,4 +1,4 @@
-Copyright © DeviceFarmer and contributors. All Rights Reserved.
+Copyright © DeviceFarmer and contributors.
 
 Dual License Notice
 ===================
@@ -8,18 +8,21 @@ Dual License Notice
    Attribution-ShareAlike 4.0 International License (CC-BY-SA-4.0)
    (https://creativecommons.org/licenses/by-sa/4.0/).
    It is adapted and normalized from:
-   - Google Play Supported Devices List
-     (https://storage.googleapis.com/play_public/supported_devices.csv):
-     Creative Commons Attribution 4.0 International (CC-BY-4.0,
-     https://creativecommons.org/licenses/by/4.0/)
    - LineageOS Wiki Device Data (https://github.com/LineageOS/lineage_wiki):
      Creative Commons Attribution-ShareAlike 3.0 Unported (CC-BY-SA-3.0,
-     https://creativecommons.org/licenses/by-sa/3.0/)
+     https://creativecommons.org/licenses/by-sa/3.0/), whose Section 4(b)
+     permits adaptations under a later version with the same License Elements.
    - Wikidata (https://query.wikidata.org/):
      Creative Commons CC0 1.0 Universal Public Domain Dedication (CC0,
      https://creativecommons.org/publicdomain/zero/1.0/)
+   It also contains factual device identifiers (retail brand, marketing name,
+   device codename and model) taken from the Google Play Supported Devices
+   List (https://storage.googleapis.com/play_public/supported_devices.csv),
+   which Google publishes without a stated license. The CC-BY-SA-4.0 grant
+   covers only DeviceFarmer's selection and arrangement of that information,
+   not the identifiers themselves.
 
-2. Code License (`index.js`, `index.d.ts`, `scripts/*`, `test/*`):
+2. Code License (`index.js`, `index.d.ts`, `brands.js`, `scripts/*`, `test/*`):
    All source code, TypeScript definitions, build scripts, and tests in this
    repository are licensed under the Apache License, Version 2.0 (Apache-2.0).
 
