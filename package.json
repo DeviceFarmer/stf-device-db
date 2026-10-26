@@ -1,6 +1,6 @@
 {
   "name": "@devicefarmer/stf-device-db",
-  "version": "2.0.0",
+  "version": "1.4.0",
   "description": "A smartphone/device database for STF.",
   "keywords": [
     "stf"
@@ -19,14 +19,15 @@
   "files": [
     "index.js",
     "index.d.ts",
+    "brands.js",
     "dist/devices.json"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/devicefarmer/stf-device-db.git"
+    "url": "git+https://github.com/DeviceFarmer/stf-device-db.git"
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">= 22.12"
   },
   "scripts": {
     "build": "node scripts/build-db.mjs",
