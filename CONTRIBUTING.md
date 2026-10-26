@@ -1,26 +1,23 @@
 # Contributing
 
-We are happy to accept any contributions that make sense and respect the rules listed below.
+We are happy to accept contributions that follow the guidelines below.
 
 ## How to contribute
 
-1. Fork the repo.
-2. Create a feature branch for your contribution out of the `master` branch. Only one contribution per branch is accepted.
-3. Implement your contribution while respecting our rules (see below).
-4. If possible, add tests for your contribution to make sure it actually works.
-5. Submit a pull request against our `master` branch!
+1. Fork the repository.
+2. Create a feature branch out of `master` for your change.
+3. Implement your changes and add/update tests in `test/db.test.mjs`.
+4. Run `npm test` (requires Node.js >= 22.12) to verify all checks pass.
+5. Submit a pull request against `master`.
 
-## Rules
+## Guidelines
 
-* **Do** use feature branches.
-* **Do** conform to existing coding style so that your contribution fits in.
-* **Do** use [EditorConfig] to enforce our [whitespace rules](.editorconfig). If your editor is not supported, enforce the settings manually.
-* **Do not** touch the `version` field in [package.json](package.json).
-* **Do not** commit any generated files, unless already in the repo. If absolutely necessary, explain why.
-* **Do not** create any top level files or directories. If absolutely necessary, explain why and update [.npmignore](.npmignore).
+* **Do** use feature branches (one logical change per pull request).
+* **Do** match the existing coding style (2-space indentation, single quotes, no semicolons in `.js`/`.mjs`).
+* **Do** keep published package contents minimal via the `"files"` field in [package.json](package.json).
+* **Do not** manually edit `version` in [package.json](package.json) for routine PRs.
+* **Do not** hand-edit `dist/devices.json`; update `scripts/build-db.mjs` and rebuild via `npm run build` instead.
 
 ## License
 
-By contributing your code, you agree to license your contribution under our [LICENSE](LICENSE).
-
-[editorconfig]: <http://editorconfig.org/>
+By contributing to this repository, you agree to license your contributions under our [LICENSE](LICENSE).
