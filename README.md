@@ -117,8 +117,10 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
+* **Code**: Everything in this repository except the device database is licensed under [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
 * **Data (`dist/devices.json`)**: Licensed under [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/), adapted from the LineageOS Wiki (CC-BY-SA-3.0) and Wikidata (CC0).
-* **Code (`index.js`, `index.d.ts`, `brands.js`, `scripts/*`, `test/*`)**: Licensed under [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+Brand, device and model names in the database are trademarks of their respective owners. They are used only to identify devices and do not imply any affiliation with or endorsement by those owners.
 
 ### Google Play device identifiers
 
