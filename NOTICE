@@ -1,0 +1,9 @@
+stf-device-db
+Copyright © DeviceFarmer and contributors.
+
+The code (`index.js`, `index.d.ts`, `brands.js`, `scripts/*`, `test/*`) is
+licensed under the Apache License, Version 2.0 (Apache-2.0). See LICENSE.
+
+The device database (`dist/devices.json`) is licensed under the Creative
+Commons Attribution-ShareAlike 4.0 International License (CC-BY-SA-4.0). See
+dist/LICENSE for its sources and the full license text.
